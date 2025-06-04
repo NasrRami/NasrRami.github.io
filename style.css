@@ -1,0 +1,212 @@
+
+body {
+    background-image: url('images/top-view-hearts-with-copy-space-valentines.jpg'); /* Replace with your actual image path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+.valentine-body {
+    background-image: url('images/istockphoto-910023036-612x612.jpg');
+    background-size: contain; /* Ensures the whole image fits */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: pink; /* Adds a background color in case of empty spaces */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+/* Center the container */
+.container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8); /* Slight white transparency for readability */
+    padding: 20px;
+    border-radius: 15px;
+    max-width: 600px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Line styling */
+.line, .line2 {
+    width: 50%;
+    margin: 20px auto;
+    border: 1px solid #000;
+}
+
+/* Square text box */
+.square {
+    padding: 70px;
+    border-radius: 10px;
+    background: rgba(255, 182, 193, 0.5); /* Light pink background */
+}
+
+/* Make sure h1 and p elements are centered */
+h1, p {
+    text-align: center;
+}
+/* Button Styling */
+.valentine-btn {
+    background-color: #ff4d6d; /* Cute pinkish-red */
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 20px;
+}
+
+.valentine-btn:hover {
+    background-color: #d43f5b; /* Slightly darker red */
+}
+
+/* Heart-Shaped Container */
+.valentine-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px; /* Adjust size as needed */
+    height: 300px;
+    background-color: pink;
+    clip-path: polygon(50% 0%, 100% 35%, 82% 100%, 50% 80%, 18% 100%, 0% 35%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Centered Message */
+.valentine-message {
+    font-size: 24px;
+    color: red;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Heart Image Container */
+.heart-container {
+    position: absolute;
+    right: 5%;
+    top: 20%;
+    transform: translateY(-50%);
+    width: 200px;
+    height: 200px;
+}
+.heart-container1 {
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 200px;
+    height: 200px;
+}
+.heart-container2 {
+    position: absolute;
+    right: 5%;
+    top: 80%;
+    transform: translateY(-50%);
+    width: 200px;
+    height: 200px;
+}
+.heart-container0 {
+    position: absolute;
+    left: 5%;
+    top: 20%;
+    transform: translateY(-50%);
+    width: 200px;
+    height: 200px;
+}
+.heart-container11 {
+    position: absolute;
+    left: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 200px;
+    height: 200px;
+}
+.heart-container22 {
+    position: absolute;
+    left: 5%;
+    top: 80%;
+    transform: translateY(-50%);
+    width: 200px;
+    height: 200px;
+}
+/* Falling Hearts Container */
+.hearts-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* So clicks pass through */
+    overflow: hidden;
+}
+
+/* Heart Shape */
+.heart {
+    position: absolute;
+    width: 50px;
+    height: 45px;
+    background: red;
+    top: 0;
+    left: 50%;
+    animation: fall linear infinite;
+    opacity: 0.8;
+    transform: translateX(-50%);
+}
+
+/* Create the heart shape using ::before and ::after */
+.heart::before, .heart::after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 80px;
+    background: red;
+    border-radius: 50px 50px 0 0;
+    top: 0;
+}
+
+.heart::before {
+    left: 25px;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+}
+
+.heart::after {
+    left: -25px;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
+}
+
+/* Falling Animation */
+@keyframes fall {
+    0% {
+        transform: translateY(-10vh) translateX(-50%);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) translateX(-50%);
+        opacity: 0;
+    }
+}
+
+
+.heart-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Changed from cover */
+}
+   
