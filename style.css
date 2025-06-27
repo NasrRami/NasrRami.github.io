@@ -10,6 +10,23 @@ body {
     align-items: center;
     margin: 0;
 }
+
+.home-body {
+    background-image: url('images/clararami.JPG'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
 .valentine-body {
     background-image: url('images/istockphoto-910023036-612x612.jpg');
     background-size: contain; /* Ensures the whole image fits */
@@ -209,4 +226,8 @@ h1, p {
     height: 100%;
     object-fit: cover; /* Changed from cover */
 }
-   
+
+.gallery img {
+    height: 180px;
+    object-fit: cover;
+}

@@ -2,48 +2,39 @@
 <html lang="en">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <title>For My Love</title>
+    <title>Welcome My Love</title>
+    <style>
+        .fade-out {
+            animation: fadeOut 0.8s forwards;
+        }
+
+        @keyframes fadeOut {
+            to {
+                opacity: 0;
+                transform: scale(0.98);
+            }
+        }
+    </style>
 </head>
-<body>
-<div class="container">
-    <h2 id="datetime"></h2>
+<body class="home-body">
+    <div id="content" class="d-flex justify-content-center align-items-center" style="height: 100vh;">
+        <div class="container bg-white bg-opacity-75 p-5 rounded shadow text-center" style="max-width: 600px;">
+            <h1 class="mb-4">Welcome to your Very Own Website Bae 💖</h1>
+            <button onclick="navigateWithFade('valentine_h.html')" class="valentine-btn">Valentine</button>
+            <button onclick="navigateWithFade('anni.html')" class="valentine-btn mt-3">Anniversary</button>
+        </div>
+    </div>
+
     <script>
-        // Get current date and time
-        var now = new Date();
-        var datetime = now.toLocaleString();
-        // Insert date and time into HTML
-        document.getElementById("datetime").innerHTML = datetime;   
+        function navigateWithFade(url) {
+            const content = document.getElementById("content");
+            content.classList.add("fade-out");
+            setTimeout(() => {
+                window.location.href = url;
+            }, 800); // match animation duration
+        }
     </script>
-    <h1>To My Love</h1>
-    <hr class="line">
-    <div class="square">
-    <div class="heart-container">
-        <img src="images/23926547-0B32-464A-BDA2-39839A25EDEB.JPG" alt="Us Together" class="heart-image">
-    </div>
-    <div class="heart-container1">
-        <img src="images/CC965A61-044F-40FF-B788-C757935B10DA.JPG" alt="Us Together" class="heart-image">
-    </div>
-    <div class="heart-container2">
-        <img src="images/Screenshot 2025-02-11 231807.png" alt="Us Together" class="heart-image">
-    </div>
-    <div class="heart-container0">
-        <img src="images/13EA9A0A-1A00-4389-ACE9-4D14702AEE68.JPG" alt="Us Together" class="heart-image">
-    </div>
-    <div class="heart-container11">
-        <img src="images/AB632AB7-962D-409D-849F-271F45674DB8.JPG" alt="Us Together" class="heart-image">
-    </div>
-    <div class="heart-container22">
-        <img src="images/B897CA13-E012-4929-AA68-8A35AB710D43.JPG" alt="Us Together" class="heart-image">
-    </div>
-        <p>Hey baby, it's your boy. I just wanted to tell you I love you a lot. It'll soon be 2 years since we've started dating, and it's just insane how fast time goes by.
-            I remember hanging out with you in the common room of gum 3/1 like it was yesterday. I loved watching New Girl with you on the couch, 
-            I remember that time you slept on my lap till like 3am (and I still thought you didn't wanna kiss me). I can't wait to see what the future has for us, but for now, click 
-            the lil button below:
-        </p>
-        <button onclick="window.location.href='valentine.html'" class="valentine-btn">Click Me</button>
-    </div>
-    <hr class="line2">
-</div>
 </body>
 </html>

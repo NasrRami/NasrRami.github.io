@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anniversary</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    html, body {
+      height: 100vh;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background: linear-gradient(to right, #ffc0cb, #dda0dd);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #4b004b;
+    }
+
+    .header {
+      padding: 20px;
+    }
+
+    .note-box {
+      background: rgba(255, 255, 255, 0.85);
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+      height: 250px;
+      overflow-y: auto;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .heart-divider {
+      font-size: 24px;
+      color: #ff69b4;
+      text-align: center;
+      margin: 15px 0;
+    }
+
+    .container-limit {
+      max-height: calc(100vh - 60px);
+      overflow: auto;
+    }
+
+    footer {
+      font-size: 14px;
+    }
+
+    /* Modal image style */
+    .modal-img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container-limit">
+    <div class="container text-center header">
+      <h1>Happy 2 Year Anniversary, My Love ❤️</h1>
+      <p class="lead">Two years of love, joy, and great memories together.</p>
+    </div>
+
+    <div class="container mb-3">
+      <div class="note-box">
+        <h3>My Dearest,</h3>
+        <p>
+            These past two years with you have been amazing, I honestly could not ask for a better partner, and best friend. I remember it all started when I first met you in front of 19, pretty sure you were drunk and we hadn't officially met but I knew who you were. Little did I know that you'd become the center piece of my life. I always remember that one and a half months we had left before the end of freshman year. It was honestly one of the best couple of months of my life. We'd skip class, smoke, fuck around, and watch shows all day. I never wanted it to end. All I could think about was how much I was gonna miss you once you left. I honestly thought that you'd start talking to me less and less everyday until you forgot about me. But luckily, the opposite of that happened. We spoke daily for hours and hours on end. Everday we grew closer and our bond became stronger until it was time to officially make you my girlfriend (great decision by me fr). We've made so many memories since the start of our relationship. From the first time you drove down to haverford, to our first trip together to LA, to our latest trip to Canada, and all the Skiing trips, it has been so fun and exciting. I want to be your forever travel buddy. Our relationship, as great as it is, hasn't always been sunshine and rainbows. We faced many challengese and obstacles to get where we're at today and I'm sure there will be many more to come. Through these obstacles we will hold each others hand and communicate our way out of them. I can't wait to see what the future holds for us, but I know as long as we're together, it'll be beautiful. I love you the most Rodulf.
+        </p>
+        <p>
+          With all my love,<br>
+          <strong>Your Person ❤️</strong>
+        </p>
+      </div>
+    </div>
+
+    <div class="heart-divider">💜 💖 💜</div>
+
+    <div class="container gallery mb-3">
+      <div class="row g-2">
+        <div class="col-4">
+          <img src="images/IMG_0713.jpg" alt="Memory 1" data-bs-toggle="modal" data-bs-target="#imageModal" data-img="images/IMG_0713.jpg">
+        </div>
+        <div class="col-4">
+          <img src="images/IMG_7183.jpg" alt="Memory 2" data-bs-toggle="modal" data-bs-target="#imageModal" data-img="images/IMG_7183.jpg">
+        </div>
+        <div class="col-4">
+          <img src="images/IMG_7504.jpg" alt="Memory 3" data-bs-toggle="modal" data-bs-target="#imageModal" data-img="images/IMG_7504.jpg">
+        </div>
+      </div>
+      <div class="row g-2 mt-2">
+        <div class="col-4">
+          <img src="images/IMG_7522.jpg" alt="Memory 4" data-bs-toggle="modal" data-bs-target="#imageModal" data-img="images/IMG_7522.jpg">
+        </div>
+        <div class="col-4">
+          <img src="images/IMG_7584.jpg" alt="Memory 5" data-bs-toggle="modal" data-bs-target="#imageModal" data-img="images/IMG_7584.jpg">
+        </div>
+        <div class="col-4">
+          <img src="images/IMG_7585.jpg" alt="Memory 6" data-bs-toggle="modal" data-bs-target="#imageModal" data-img="images/dfb174ca-7a6c-46cc-8414-f12aa211745e.png">
+        </div>
+      </div>
+    </div>
+
+    <footer class="text-center py-2">
+      <p>Here's to many more anniversaries together 💕</p>
+    </footer>
+  </div>
+
+  <!-- Image Modal -->
+  <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content bg-transparent border-0">
+        <div class="modal-body p-0">
+          <img src="" alt="Full Image" class="modal-img w-100">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const imageModal = document.getElementById('imageModal');
+    const modalImg = imageModal.querySelector('.modal-img');
+    imageModal.addEventListener('show.bs.modal', function (event) {
+      const triggerImg = event.relatedTarget;
+      modalImg.src = triggerImg.getAttribute('data-img');
+    });
+  </script>
+</body>
+</html>
